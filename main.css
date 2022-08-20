@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Darker-cyan: hsl(158, 36%, 17%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--Cream);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 640px;
+  height: 478px;
+  /* border: solid 5px red; */
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  margin: 15vh 0;
+}
+
+#img-dsk {
+  height: 478px;
+}
+
+#img-mob {
+  display: none;
+}
+
+.info {
+  background-color: var(--White);
+  padding: 40px;
+}
+
+.info h1 {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 1vh;
+  font-weight: 500;
+  font-size: x-small;
+  margin-bottom: 1rem;
+}
+
+#product-name {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: xx-large;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+#desc {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+#prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 205px;
+}
+
+.before {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+.after {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: var(--Dark-cyan);
+  font-family: "Fraunces", serif;
+}
+
+#btn {
+  display: flex;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+#btn img {
+  margin-right: 10px;
+}
+#btn:hover {
+  background-color: var(--Darker-cyan);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #img-dsk {
+    display: none;
+  }
+
+  #img-mob {
+    display: block;
+    width: 350px;
+  }
+}
