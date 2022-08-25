@@ -30,7 +30,6 @@ body {
 
 .container {
   width: 64rem;
-  border: solid 2px red;
   border-radius: 15px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
